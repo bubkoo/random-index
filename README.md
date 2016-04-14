@@ -32,6 +32,11 @@ randomIndex(1);    // => 0~1
 randomIndex('10'); // => 0~10   
 ```
 
+## Related
+
+- [pick-item](https://github.com/bubkoo/pick-item) - Randomly sampling a item from an array.
+- [pick-items](https://github.com/bubkoo/pick-items) - Randomly sampling some items from an array. 
+
 
 ## Contributing
 
