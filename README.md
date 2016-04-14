@@ -23,8 +23,9 @@ $ npm install --save random-index
 ```js
 var randomIndex = require('random-index');
 
-// randomIndex(max);
-// the result is between `0` and `max`
+// API:
+//   randomIndex(max);
+//   // => the result is between `0` and `max`
 
 randomIndex();     // => 0~4294967295           
 randomIndex(1);    // => 0~1
