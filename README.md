@@ -1,7 +1,6 @@
 # random-index
 
-> Generate a random array-like index.
-
+> Return a random array-like index.
 
 [![MIT License](https://img.shields.io/badge/license-MIT_License-green.svg?style=flat-square)](https://github.com/mock-end/random-index/blob/master/LICENSE)
 
@@ -15,7 +14,6 @@
 $ npm install --save random-index 
 ```
 
-
 ## Usage
 
 > For more use-cases see the [tests](https://github.com/mock-end/random-index/blob/master/test/spec/index.js)
@@ -24,13 +22,16 @@ $ npm install --save random-index
 var randomIndex = require('random-index');
 
 // API:
-//   randomIndex(max);
-//   // => the result is between `0` and `max`
+// - randomIndex();
+// - randomIndex(max);
 
 randomIndex();     // => 0~4294967295           
 randomIndex(1);    // => 0~1
 randomIndex('10'); // => 0~10   
 ```
+
+The `max` is **inclusive**, this means `randomIndex(2)` would return either `0`, `1`, or `2`.
+
 
 ## Related
 

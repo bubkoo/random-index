@@ -1,10 +1,12 @@
 'use strict';
 
-var toLength = require('to-length');
+var toLength       = require('to-length');
+var randomNatural  = require('random-natural');
+var MAX_ARR_LENGTH = require('max-array-length');
 
 module.exports = function (max) {
 
-  max = max === undefined ? 4294967295 : toLength(max);
+  max = max === undefined ? MAX_ARR_LENGTH : toLength(max);
 
-  return Math.round(Math.random() * max);
+  return randomNatural(0, max);
 };
