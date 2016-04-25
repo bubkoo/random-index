@@ -1,6 +1,6 @@
 {
   "name": "random-index",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Return a random array-like index.",
   "main": "index.js",
   "scripts": {
