@@ -1,12 +1,25 @@
 'use strict';
 
-var toLength       = require('to-length');
 var randomNatural  = require('random-natural');
 var MAX_ARR_LENGTH = require('max-array-length');
 
-module.exports = function (max) {
+var fixme = randomNatural.fixme;
 
-  max = max === undefined ? MAX_ARR_LENGTH : toLength(max);
+module.exports = function (options) {
 
-  return randomNatural(0, max);
+  if (options) {
+    if (!options.inspected) {
+      options.min = fixme(options.min, 0, MAX_ARR_LENGTH, true);
+      options.max = fixme(options.max, 0, MAX_ARR_LENGTH, false);
+    }
+  } else {
+    options = {
+      min: 0,
+      max: MAX_ARR_LENGTH
+    };
+  }
+
+  options.inspected = true;
+
+  return randomNatural(options);
 };

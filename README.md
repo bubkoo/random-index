@@ -22,21 +22,40 @@ $ npm install --save random-index
 var randomIndex = require('random-index');
 
 // API:
-// - randomIndex();
-// - randomIndex(max);
+// - randomIndex([options]);
 
-randomIndex();     // => 0~4294967295           
-randomIndex(1);    // => 0~1
-randomIndex('10'); // => 0~10   
+// options
+// - min
+// - max
+
+
+randomIndex();     
+// => 3561           
+
+randomIndex({ max: 1 });    
+// => 1
+
+randomIndex({ min:10, max: 100 });
+// => 64   
 ```
 
-The `max` is **inclusive**, this means `randomIndex(2)` would return either `0`, `1`, or `2`.
+**Note**: these `min` and `max` are **inclusive**, so they are included in the range. 
+
+This means `randomIndex({max: 2})` would return either `0`, `1`, or `2`.
 
 
 ## Related
 
-- [pick-item](https://github.com/mock-end/pick-item) - Randomly sampling a item from an array.
-- [pick-items](https://github.com/mock-end/pick-items) - Randomly sampling some items from an array. 
+- [random-integral](https://github.com/mock-end/random-integral) - Return a random integer.
+- [random-natural](https://github.com/mock-end/random-natural) - Return a random natural number.
+- [random-decimal](https://github.com/mock-end/random-decimal) - Return a random decimal.
+- [random-floating](https://github.com/mock-end/random-floating) - Return a random floating point number.
+- [random-binary](https://github.com/mock-end/random-binary) - Return a random binary number.
+- [random-octal](https://github.com/mock-end/random-octal) - Return a random octal number.
+- [random-hexadecimal](https://github.com/mock-end/random-hexadecimal) - Return a random hexadecimal number.
+- [random-unicode](https://github.com/mock-end/random-unicode) - Return a random unicode. 
+- [random-bool](https://github.com/mock-end/random-bool) - Return a random boolean (true/false).
+- [random-char](https://github.com/mock-end/random-char) - Return a random char.
 
 
 ## Contributing

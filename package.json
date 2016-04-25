@@ -16,7 +16,6 @@
     "index",
     "int",
     "integer",
-    "num",
     "number",
     "generator",
     "generate",
@@ -51,7 +50,6 @@
   },
   "dependencies": {
     "max-array-length": "^1.0.0",
-    "random-natural": "^1.0.2",
-    "to-length": "^1.0.0"
+    "random-natural": "^1.0.3"
   }
 }
